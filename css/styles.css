@@ -1,10 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700;900&display=swap');
 
+body {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(500px, 1fr) );
+    grid-template-rows: 25px auto auto;
+    grid-template-areas: 
+    "topbar topbar topbar topbar"
+    "profile  .  content  . "
+    "profile  .  content  ." ;
+
+    
+    background-color: #f6f5de;
+    font-family: 'Source Code Pro', monospace;
+
+    
+}
+
+.topbar {
+    grid-area: topbar;
+
+}
+
+.profile {
+    grid-area: profile;
+
+}
+
+.content {
+    grid-area: content;
+
+}
+
+
+
+
+ /*
 body,
 html {
     margin: 0;
     height: 100vh;
-    /* background-color: #f6f5f7; */
+    background-color: #f6f5f7;
     background-color: #f6f5de;
     font-family: 'Source Code Pro', monospace;
 }
@@ -82,10 +117,15 @@ strong {
 
 
 .content {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: auto;
+    justify-items: center;
     justify-content: center;
     align-content: center;
+    align-items: center;
+    
+    
 }
 
 @media (max-width: 780px) {
@@ -95,8 +135,10 @@ strong {
 }
 
 .content__about-me {
+    grid-column: 1;
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .content__about-me__container{
@@ -116,10 +158,11 @@ strong {
 }
 
 .content__skills {
+    grid-column: 2;
     display: flex;
     padding: 0 15px 0 15px;
     border-radius: 15px;
-    
+    width: 50%;    
     margin-left: 25px;
     box-shadow: 0 5px 5px 5px #888888;
 
@@ -155,7 +198,7 @@ strong {
 }
 
 
-/* 
+
 .card__title {
     background-color: #bc9b78;
     margin: 0;
