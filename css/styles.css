@@ -85,29 +85,56 @@ strong {
     flex-flow: row nowrap;
     justify-content: center;
     align-content: center;
-
 }
 
-.content__title_about-user {
-    
-    margin-left: 50px;
+.content__container__about__user{
+    display: flex;
+    flex-direction: column;
+}
+
+.content__title_about-user {    
+    margin-left: 10px;
+    padding-top: 5px;
     font-size: 1.17em;
     font-weight: bolder;
-    
 }
 
-.content__about-user {
-    
+.content__about-user {    
     padding: 0 15px 0 15px;
     border-radius: 15px;
-    border-color: black;
-    border-style: solid;
-    border-top: 0;
-    width: 50%;
+    
     margin-left: 25px;
-    box-shadow: 0 10px 10px 10px #888888;
+    box-shadow: 0 5px 5px 5px #888888;
    
 }
+
+.content__skills {
+    padding: 0 15px 0 15px;
+    border-radius: 15px;
+    
+    margin-left: 25px;
+    box-shadow: 0 5px 5px 5px #888888;
+
+}
+
+.content__title_skills {   
+    margin-left: 10px;
+    padding-top: 5px;
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+/* .content__list-skills {    
+    
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    border-radius: 15px;
+    width: 50%;
+    margin-left: 25px;
+    box-shadow: 0 5px 5px 5px #888888;
+   
+} */
+
 
 
 
