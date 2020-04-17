@@ -4,7 +4,8 @@ body,
 html {
     margin: 0;
     height: 100vh;
-    background-color: #f6f5f7;
+    /* background-color: #f6f5f7; */
+    background-color: #f6f5de;
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -87,28 +88,35 @@ strong {
     align-content: center;
 }
 
-.content__container__about__user{
+@media (max-width: 780px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.content__about-me {
     display: flex;
     flex-direction: column;
 }
 
-.content__title_about-user {    
+.content__about-me__container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    border-radius: 15px;    
+    margin-left: 25px;
+    box-shadow: 0 5px 5px 5px #888888;
+}
+
+.content__title__about-me {    
     margin-left: 10px;
     padding-top: 5px;
     font-size: 1.17em;
     font-weight: bolder;
 }
 
-.content__about-user {    
-    padding: 0 15px 0 15px;
-    border-radius: 15px;
-    
-    margin-left: 25px;
-    box-shadow: 0 5px 5px 5px #888888;
-   
-}
-
 .content__skills {
+    display: flex;
     padding: 0 15px 0 15px;
     border-radius: 15px;
     
@@ -124,18 +132,27 @@ strong {
     font-weight: bolder;
 }
 
-/* .content__list-skills {    
-    
+.content__list-skills {    
     flex-direction: column;
     padding: 0 15px 0 15px;
-    border-radius: 15px;
-    width: 50%;
     margin-left: 25px;
-    box-shadow: 0 5px 5px 5px #888888;
-   
-} */
+}
 
+.content__list-skills_language {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
+.content__skills__item {
+    padding: 0.3em 0.2em;
+    margin-right: 0.5em;
+    color: black;
+    font-size: 1.7em;
+    margin: 15px 0 15px 0;
+}
 
 
 /* 
