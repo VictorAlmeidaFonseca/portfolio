@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700;900&display=swap');
+
+body,
+html {
+    margin: 0;
+    height: 100vh;
+    background-color: #f6f5f7;
+    font-family: 'Source Code Pro', monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user__avatar img {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #e17b77;
+    height: 200px; 
+    margin: 8px 25px 25px 25px;
+} 
+
+.user__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.card-user__social-medias {
+    display: flex;
+}
+
+.user__list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.user__item  {
+    padding: 0.3em 0.2em;
+    margin-right: 0.5em;
+    color: whitesmoke;
+    font-size: 1.7em;
+    margin: 15px 0 15px 0;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #e17b77;
+}
+
+strong {
+
+    color: #c92c2c;
+
+}
+
+.user__job {
+   font-weight: bolder;
+}
+
+.user__name {
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+
+
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.content__title_about-user {
+    
+    margin-left: 50px;
+    font-size: 1.17em;
+    font-weight: bolder;
+    
+}
+
+.content__about-user {
+    
+    padding: 0 15px 0 15px;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+    border-top: 0;
+    width: 50%;
+    margin-left: 25px;
+    box-shadow: 0 10px 10px 10px #888888;
+   
+}
+
+
+
+/* 
+.card__title {
+    background-color: #bc9b78;
+    margin: 0;
+    color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+
+    #444
+
+} */
