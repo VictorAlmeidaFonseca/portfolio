@@ -5,9 +5,9 @@ body {
     grid-template-columns: repeat(autofit, minmax(500px, 1fr) );
     grid-template-rows: 25px auto auto;
     grid-template-areas: 
-    "topbar topbar topbar topbar"
-    "profile  .  content  . "
-    "profile  .  content  ." ;
+    "topbar topbar topbar "
+    "profile  .  content   "
+    ".  .  content   " ;
 
     
     background-color: #f6f5de;
