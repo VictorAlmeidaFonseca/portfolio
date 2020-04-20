@@ -6,66 +6,96 @@ body {
     font-family: 'Source Code Pro', monospace;
     margin: 0;
     width: 100vw;
-    /* height: 100vw; */
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-template-rows: 25px 1fr 1fr 1fr;
-    grid-template-areas:
-            "topbar "     
-            "profile"
-            "content"
-            "skills" ;
-     
+    height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 25px auto  25px auto;
+    grid-template-areas: 
+    " header "
+    " profile "
+    " title "
+    " skills "
+  ;
 }
 
-.topbar {
-    grid-area: topbar;
+.header {
+    grid-area: header;
     display: grid;
     justify-content: flex-end;
     margin-right: 25px;
-    
 }
 
 .profile {
     grid-area: profile;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-.container {
+.profile__avatar{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    word-break: break-word;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
+
 }
 
-.container-profile__avatar img {
+.profile__about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 0;
+    justify-self: center;
+    align-self: center;
+    margin-right: 15px;
+    padding: 0 8px 0 8px;
+}
+
+@media (min-width:500) 
+{
+   .profile__about-me{
+      margin-top: 25px;
+    }
+   
+}
+
+.profile_avatar-foto img {
     border-radius: 50%;
     border-style: solid;
     border-color: #e17b77;
     height: 180px; 
     margin: 8px 25px 25px 25px;
+
 }
 
-.container-profile__title {
+.profile__avatar-description {
+    align-content: center;
+    font-weight: bolder;
+    font-size: 1.0em;
+}
+
+.profile__avatar-name {
     font-weight: bolder;
     font-size: 1.4em;
 
 }
 
-.container-profile__text {
+.profile__avatar-job {
     font-weight: bolder;
     font-size: 1.2em;
     margin-bottom: 15px;
-
 }
 
-.container-profile__medias{ 
+.profile__avatar-medias {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     padding: 0.3em 0.2em;
-    margin-right: 0.5em;
-    color: whitesmoke;
-    font-size: 1.7em;
-    margin: 15px 0 35px 0;
+    align-content: space-around;
+    font-size: 1.5em;
 }
 
 a {
@@ -80,236 +110,33 @@ a:link {
     text-decoration:none;
 }
 
-.title {
-    font-weight: bolder;
-    font-size: 1.2em;
+span {
+    padding: 0.3em 0.2em;
 }
 
-
-.content {
-    grid-area: content;
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    justify-items: center;
-    align-items: center;
-    gap: 10px 10px;
-    margin: 0 15px 0 15px;
-    padding: 0 10% 0 10%;
-}
-
-.container-about-me__text {
-    text-indent: 4em;
-    line-height: 130%;    
-}
-
-
-
-strong {
-    color: #c92c2c;
-}
-
-.container-skills {
+.profile__about-me {
     display: flex;
     flex-direction: column;
+}
+
+.profile__about-me-header{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.skills {
+    grid-area: skills;
+    background-color: darksalmon;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .header-skills {
+    grid-area: title;
     display: flex;
-    flex-direction: column;
-   
-}
-
-.container-skills__itens {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    
-}
-
-.container-skills__box {
-    border-radius: 15px;
-    border-style: solid;
-}
-
-.container-skills__list-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px 15px;
-
-}
-
- /*
-body,
-html {
-    margin: 0;
-    height: 100vh;
-    background-color: #f6f5f7;
-    background-color: #f6f5de;
-    font-family: 'Source Code Pro', monospace;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.user {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.user__avatar img {
-    border-radius: 50%;
-    border-style: solid;
-    border-color: #e17b77;
-    height: 200px; 
-    margin: 8px 25px 25px 25px;
-} 
-
-.user__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.card-user__social-medias {
-    display: flex;
-}
-
-.user__list{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    
-}
-
-.user__item  {
-    padding: 0.3em 0.2em;
-    margin-right: 0.5em;
-    color: whitesmoke;
-    font-size: 1.7em;
-    margin: 15px 0 15px 0;
-}
-
-a {
-    color: black;
-}
-
-a:hover {
-    color: #e17b77;
+    justify-self: center;
 }
 
 strong {
-
     color: #c92c2c;
-
 }
-
-.user__job {
-   font-weight: bolder;
-}
-
-.user__name {
-    font-weight: bolder;
-    font-size: 1.4em;
-}
-
-
-.content {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: auto;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    
-    
-}
-
-@media (max-width: 780px) {
-    .content {
-        flex-direction: column;
-    }
-}
-
-.content__about-me {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.content__about-me__container{
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px 0 15px;
-    border-radius: 15px;    
-    margin-left: 25px;
-    box-shadow: 0 5px 5px 5px #888888;
-}
-
-.content__title__about-me {    
-    margin-left: 10px;
-    padding-top: 5px;
-    font-size: 1.17em;
-    font-weight: bolder;
-}
-
-.content__skills {
-    grid-column: 2;
-    display: flex;
-    padding: 0 15px 0 15px;
-    border-radius: 15px;
-    width: 50%;    
-    margin-left: 25px;
-    box-shadow: 0 5px 5px 5px #888888;
-
-}
-
-.content__title_skills {   
-    margin-left: 10px;
-    padding-top: 5px;
-    font-size: 1.17em;
-    font-weight: bolder;
-}
-
-.content__list-skills {    
-    flex-direction: column;
-    padding: 0 15px 0 15px;
-    margin-left: 25px;
-}
-
-.content__list-skills_language {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.content__skills__item {
-    padding: 0.3em 0.2em;
-    margin-right: 0.5em;
-    color: black;
-    font-size: 1.7em;
-    margin: 15px 0 15px 0;
-}
-
-
-
-.card__title {
-    background-color: #bc9b78;
-    margin: 0;
-    color: whitesmoke;
-    padding: 10px;
-    text-align: center;
-
-    #444
-
-} */
