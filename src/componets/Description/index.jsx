@@ -1,0 +1,55 @@
+import React from 'react'
+import { FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi'
+import { GoMarkGithub } from 'react-icons/go'
+import Avatar from  '../../assets/foto-perfil.jpg'
+import './styles.css'
+
+const socialMediasLinks = {
+  instagram: "https://www.instagram.com/victor_a_fonseca/",
+  twitter: "https://twitter.com/fonsecaalmeida1",
+  linkedin: "https://www.linkedin.com/in/victor-a-fonseca/",
+  github:"https://github.com/VictorAlmeidaFonseca?tab=repositories"
+
+}
+ 
+const Item = (props) => {
+  return <li className="item">{props.item}</li>
+}
+
+const Description = (props) => {
+  return (
+    <div className="description">
+      <div className="description__avatar">
+        <img className="avatar" src={Avatar} alt=""/>
+      </div>
+      <div className="description__name">{props.name}</div>
+      <div className="description__job">{props.job}</div>
+        <div className="description__social_medias">
+          <ul className="social_medias_list">
+            <a href={socialMediasLinks.instagram}
+               target="_blank"
+               rel="noopener noreferrer">
+              <Item item={<FiInstagram />} />
+            </a>
+            <a href={socialMediasLinks.twitter}
+               target="_blank"
+               rel="noopener noreferrer">
+              <Item item={<FiTwitter />} />
+            </a>
+            <a href={socialMediasLinks.linkedin}
+               target="_blank"
+               rel="noopener noreferrer"> 
+              <Item item={<FiLinkedin />} />
+            </a>
+            <a href={socialMediasLinks.github}
+               target="_blank"
+               rel="noopener noreferrer">
+              <Item item={<GoMarkGithub />} />
+            </a>
+          </ul>
+        </div>
+    </div>
+    )
+}
+
+export default Description
