@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Header from '../../componets/Header'
 
 const Projects = () => {
     return(
-        <div className="test">
-              Projects
-              </div>
+        <Fragment>
+        <Header />
+        <div className="main"> Projects</div>
+        </Fragment>
     )
 }
 

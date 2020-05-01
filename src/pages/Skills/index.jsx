@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Header from '../../componets/Header'
 
 const Skills = () => {
     return(
-        <div className="main">
-              Skills
-            </div>
+        <Fragment>
+        <Header />
+        <div className="main"> Skills</div>
+        </Fragment>
     )
 }
 
