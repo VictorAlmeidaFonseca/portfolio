@@ -1,11 +1,11 @@
 import React from 'react';
+import Header from '../../componets/Header'
 
 const Home = () => {
-    return(
-        <div className="test">
-                  Home
-                  </div>
-    )
+  return(
+   <header className="header">
+       <Header />
+   </header>
+  )
 }
-
 export default Home;

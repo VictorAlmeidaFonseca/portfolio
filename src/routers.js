@@ -8,7 +8,7 @@ import Projects from './pages/Projects'
 export default function Routes(){
     return (
         <BrowserRouter>
-            <Switch>
+            <Switch>                
                 <Route exact path='/' component={Home} />
                 <Route path='/skills' component={Skills} />
                 <Route path='/projects' component={Projects} />

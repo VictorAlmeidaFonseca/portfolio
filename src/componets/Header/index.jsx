@@ -1,30 +1,20 @@
 import React from 'react';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import Menu from './Menu';
+import Toogle from './Toogle'
+import Description from './Description';
 
-import './styles.css';
-
-const Header = () => {
-    return(
-        <header className="header">
-             <div className="menu">
-                 <ul className="menu_main">
-                    <li className="iten"><Link to="/"> About Me </Link></li>
-                    <li className="iten"><Link to="/skills"> Skills </Link></li>
-                    <li className="iten"><Link to="/projects"> Projects </Link></li>
-                 </ul>
-             </div>
-            
-            <div className="tooglebox">
-                <FiSun />
-                 <div className="toogle">
-                     <input type="checkbox" name="theme" id="switch"/>
-                      <label htmlFor="switch">Toogle</label>
-                </div>
-                <FiMoon />
-            </div>           
-        </header>
-    )
+const NavBarMain = () => {
+  return(
+    <div className="header__topbar">
+      <div className="header__topbar__nav">
+        <Menu />
+        <Toogle />
+      </div>
+      <div className="header__topbar__content">
+       <Description />
+      </div>
+    </div>
+   )
 }
 
-export default Header;
+export default NavBarMain;

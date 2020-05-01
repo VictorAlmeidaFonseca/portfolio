@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi'
 import { GoMarkGithub } from 'react-icons/go'
-import Avatar from  '../../assets/foto-perfil.jpg'
+import Avatar from  '../../../assets/foto-perfil.jpg'
 import './styles.css'
 
 const socialMediasLinks = {
@@ -18,13 +18,13 @@ const Item = (props) => {
 
 const Description = (props) => {
   return (
-    <div className="description">
-      <div className="description__avatar">
+    <div className="header__description">
+      <div className="header__description__avatar">
         <img className="avatar" src={Avatar} alt=""/>
       </div>
-      <div className="description__name">{props.name}</div>
-      <div className="description__job">{props.job}</div>
-        <div className="description__social_medias">
+      <div className="header__description__name">{props.name}</div>
+      <div className="header__description__job">{props.job}</div>
+        <nav className="header__description__social_medias">
           <ul className="social_medias_list">
             <a href={socialMediasLinks.instagram}
                target="_blank"
@@ -47,7 +47,7 @@ const Description = (props) => {
               <Item item={<GoMarkGithub />} />
             </a>
           </ul>
-        </div>
+        </nav>
     </div>
     )
 }
