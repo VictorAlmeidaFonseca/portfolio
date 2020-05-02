@@ -1,0 +1,17 @@
+.header__topbar {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__topbar__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+  
+.header__topbar__content{
+ 
+
+}

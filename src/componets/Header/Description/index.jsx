@@ -22,6 +22,7 @@ const Description = (props) => {
       <div className="header__description__avatar">
         <img className="avatar" src={Avatar} alt=""/>
       </div>
+      <div className="header__description__content">
       <div className="header__description__name">{props.name}</div>
       <div className="header__description__job">{props.job}</div>
         <nav className="header__description__social_medias">
@@ -48,6 +49,7 @@ const Description = (props) => {
             </a>
           </ul>
         </nav>
+      </div>
     </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css'
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 const Toogle = () => {

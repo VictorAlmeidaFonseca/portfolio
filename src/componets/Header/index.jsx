@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
+import './styles.css'
 import Toogle from './Toogle'
 import Description from './Description';
 
@@ -11,7 +12,10 @@ const NavBarMain = () => {
         <Toogle />
       </div>
       <div className="header__topbar__content">
-       <Description />
+       <Description 
+         name="Victor Almeida"
+         job="Software developer"
+       />
       </div>
     </div>
    )
