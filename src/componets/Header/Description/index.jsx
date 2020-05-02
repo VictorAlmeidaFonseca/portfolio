@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi'
+import { FiInstagram, FiTwitter, FiLinkedin, FiBold } from 'react-icons/fi'
 import { GoMarkGithub } from 'react-icons/go'
 import Avatar from  '../../../assets/foto-perfil.jpg'
 import './styles.css'
@@ -30,22 +30,22 @@ const Description = (props) => {
             <a href={socialMediasLinks.instagram}
                target="_blank"
                rel="noopener noreferrer">
-              <Item item={<FiInstagram />} />
+              <Item item={<FiInstagram size={26}/>} />
             </a>
             <a href={socialMediasLinks.twitter}
                target="_blank"
                rel="noopener noreferrer">
-              <Item item={<FiTwitter />} />
+              <Item item={<FiTwitter size={26} />} />
             </a>
             <a href={socialMediasLinks.linkedin}
                target="_blank"
                rel="noopener noreferrer"> 
-              <Item item={<FiLinkedin />} />
+              <Item item={<FiLinkedin size={26} />} />
             </a>
             <a href={socialMediasLinks.github}
                target="_blank"
                rel="noopener noreferrer">
-              <Item item={<GoMarkGithub />} />
+              <Item item={<GoMarkGithub size={26} />} />
             </a>
           </ul>
         </nav>
